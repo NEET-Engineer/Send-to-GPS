@@ -20,8 +20,15 @@
 #                                ****************                                #
 # ****************************************************************************** #
 
+$xyz = Form($form_01,"")
 
+BeginCase
+	Case $xyz = "Button_01"
+		Gosub Name=Local_Caching
 
+	Case $xyz = "Button_02"
+		Gosub Name=Caching_Trip
+EndCase
 
 
 
@@ -31,9 +38,15 @@
 #                               *******************                              #
 # ****************************************************************************** #
 
+BeginSub Name=Local_Caching
+	GcGetCaches Settings="32obx" ShowSummary="No"
 
+	MsgOk Msg="Local caches have been updated." Caption="Send_to_GPS"
+EndSub
 
-
+BeginSub Name=Caching_Trip
+	
+EndSub
 
 
 # ****************************************************************************** #

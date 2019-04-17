@@ -42,6 +42,15 @@ BeginSub Name=Local_Caching
 	GcGetCaches Settings="32obx" ShowSummary="No"
 
 	MsgOk Msg="Local caches have been updated." Caption="Send_to_GPS"
+	DELAY MS=250
+
+	MsgOk Msg="Delete all waypoints from your GPS, and then hook it up to your computer." Caption="Send_to_GPS"
+	DELAY MS=250
+
+	MsgOk Msg="Press OK when you are ready." Caption="Send_to_GPS"
+	DELAY MS=250
+
+	EXPORT type=gps Settings="32obx"
 EndSub
 
 BeginSub Name=Caching_Trip
